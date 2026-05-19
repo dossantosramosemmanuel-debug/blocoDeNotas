@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloco de Notas Moderno</title>
+    <title>Bloco de Textos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="container">
-        <h1> Bloco de Notas do Emmanuel</h1>
+    <main class="container">
+        <h1>Bloco de textos do Emmanuel</h1>
         <p>Suas anotações são salvas automaticamente no seu navegador.</p>
-        
-        <textarea id="blocoDeNotas" placeholder="Comece a digitar aqui..."></textarea>
-    </div>
+
+        <div class="editor-group">
+            <label for="blocoDeNotas">Anotação</label>
+            <textarea id="blocoDeNotas" placeholder="Comece a digitar aqui..." aria-describedby="statusAviso"></textarea>
+        </div>
+
+        <div class="toolbar">
+            <button id="btnLimpar" type="button">Limpar notas</button>
+            <div id="statusAviso" class="status" role="status" aria-live="polite">Nenhuma alteração pendente.</div>
+        </div>
+    </main>
 
     <script src="script.js"></script>
 </body>
